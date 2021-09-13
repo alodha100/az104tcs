@@ -1,0 +1,157 @@
+DAY-1
+=========
+What is the role of an Azure Admin
+=========
+
+Azure active directory 
+==============================
+Identity 
+-----------
+1. Users 
+2. Groups 
+3. Application ==> service principle 
+4. Devices 
+
+
+AD (ADDS) Vs AAD 
+#############################
+
+1. ADDS - you manage everything, AAD is a SAAS platform, you don't manage the DC 
+
+2. ADDS - supports kerberos and NTLM for authentication but AAD supports SAML, OpenID, Oauth and WS-Fed 
+
+3. AAD does not support parent child domains, trees and forests 
+
+3. AAD does not support OUs (Organization Units), AD supports 
+
+4. AAD does not support GPO (Group policy objects)
+
+5. AAD does not support LDAP, AD supports LDAP
+
+6. AAD supports multi tenants but AD does not support multi-tenants but supports parent, child domains 
+
+7. Each tenant in AAD can have multiple subscriptions, but in AD there is no concept of subscriptions
+
+8. AAD supports Federation by default, but in AD you need  a service ADFS 
+
+9. AAD is a flat model wherein ADDS is hierarchial model 
+
+10. AAD is REST based access over http or https 
+
+===============================================================
+Licensing
+==============
+1. Free 
+2. Microsoft 365 
+3. P1 
+4. P2 
+
+
+1. PIM, identity protection, identity governance  and access reviews are supported only by the P2 
+
+2. Conditional access policies starts with P1 
+
+===============================================
+
+https://github.com/MicrosoftLearning/AZ-104-MicrosoftAzureAdministrator/tree/master/Instructions/Labs
+
+===============================================
+Device management 
+=======================
+https://support.microsoft.com/en-us/account-billing/join-your-work-device-to-your-work-or-school-network-ef4d6adb-5095-4e51-829e-5457430f3973
+
+1. Azure AD join ==> windows devices 
+2. Azure AD registered ==> IOS, Android devices 
+3. Hybrid Device ==> A device connected to AD as well as AAD 
+
+=====================================================
+SSPR ==> Self service password reset 
+
+=====================================================
+
+lodhaajay100gmail.onmicrosoft.com = Domain = Tenant = Directory 
+
+user1@lodhaajay100gmail.onmicrosoft.com
+
+Suda6135
+
+
+krish@cts.com
+
+
+abc.com === superman@abc.com 
+xyz.com  ===> ironman@xyz.com
+===================================
+
+Groups 
+========
+
+1. Security group
+2. Office 365 groups 
+
+----------------------
+
+Dynamic group 
+-------------------
+User will be automatically added to some groups depeding on some pre-set rules 
+
+---------------------------
+
+Custom domain verification methods 
+==========================================
+1. TXT method 
+2. MX method 
+
+==========================================
+
+SSPR = Self service password reset 
+
+Writeback 
+
+if you have them then you don't need a helpdesk 
+
+===========================================
+
+
+Azure Architecture 
+============================
+1. Geo location 
+2. Region 
+3. Region pair 
+4. Availability Zones 
+5. Availability Set 
+
+Account Architecture 
+==================
+
+1. Account 
+2. Tenant/Directory ==> Single instance of AAD (We manage the users at this level)
+3. Managment groups ==> Collection of Subscriptions 
+4. Subscriptions ===> Billing boundary and collection of RGs (We manage the resources)
+5. Resource groups ===> Collection of resources 
+6. Resources
+
+======================
+Azure policy 
+--------------
+1. Policy 
+2. Initiatve ==> Collection of polices 
+========================================
+
+
+RBAC = role based access control 
+
+In Azure there are 2 types of Roles 
+====================================
+
+1. AAD roles 
+
+2. Subscription or resource roles
+
+
+3 important in-built roles 
+-----------------------------
+
+1. Owner 
+2. Contributor 
+3. Reader 
